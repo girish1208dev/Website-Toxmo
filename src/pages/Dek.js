@@ -1,6 +1,12 @@
 import "./Dek.css";
 
 const Dek = () => {
+  const onFrameContainerClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='frameContainer']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
   return (
     <div className="dek">
       <div className="frame-group">
@@ -10,7 +16,7 @@ const Dek = () => {
         <div className="group-parent5">
           <img className="frame-item" alt="" src="/group-61.svg" />
           <b className="toxmo1">Toxmo</b>
-          <div className="contact-container">
+          <div className="contact-container" onClick={onFrameContainerClick}>
             <b className="contact3">Contact</b>
           </div>
         </div>
@@ -143,7 +149,7 @@ const Dek = () => {
           </div>
         </div>
       </div>
-      <div className="group-parent9">
+      <div className="group-parent9" data-scroll-to="frameContainer">
         <div className="group-parent10">
           <div className="group-parent11">
             <div className="linkedin-group">
