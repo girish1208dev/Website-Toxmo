@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
 import Dek from "./pages/Dek";
 import Mob from "./pages/Mob";
+import Aboutus from "./pages/Aboutus"; // Import the Aboutus page
 
 function App() {
   const action = useNavigationType();
@@ -59,9 +60,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={isMobile ? <Mob /> : <Dek />} />
-      {/* If isMobile is true, render Mob component, otherwise, render Dek component */}
+      <Route path="/" element={<>{isMobile ? <Mob /> : <Dek />}</>} />
+      <Route path="/aboutus" element={<Aboutus />} /> {/* Add a route for the Aboutus page */}
     </Routes>
   );
 }
+
 export default App;
+
