@@ -1,7 +1,12 @@
 import { useCallback } from "react";
 import "./Dek.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import Aboutus from './Aboutus';
 
 const Dek = () => {
+  const [showAboutUs, setShowAboutUs] = useState(false);
   const onFrameContainerClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='frameContainer']");
     if (anchor) {
@@ -20,6 +25,7 @@ const Dek = () => {
           <div className="contact-container" onClick={onFrameContainerClick}>
             <b className="contact3">Contact</b>
           </div>
+          <Link to="/aboutus" onClick={() => setShowAboutUs(true)}>About Us</Link>
         </div>
         <div className="group-wrapper2">
           <div className="craft-toxmo-1-group">
