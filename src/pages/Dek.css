@@ -229,7 +229,7 @@
   overflow: hidden;
   height: 1237px;
   object-fit: cover;
-  opacity: 0.75;
+  opacity: 0.95;
 }
 .the-stores-are1 {
   color: var(--color-black);
@@ -267,6 +267,8 @@
   font-size: 30px;
 }
 .note-the-stores-are-from-the-group {
+  padding-top: 100px;
+  background-color: rgba(168, 134, 46, 0.64);
   position: absolute;
   width: 78.02%;
   top: 226px;
@@ -274,7 +276,22 @@
   left: 10.95%;
   height: 291px;
   font-size: var(--font-size-xl);
+  border-radius: 35px;
 }
+
+.note-the-stores-are-from-the-group.slideFromLeft {
+  animation: slideFromLeft 2s forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .cool-part-is-container2 {
   position: absolute;
   width: 100%;

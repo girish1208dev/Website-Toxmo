@@ -234,7 +234,7 @@
   overflow: hidden;
   height: 307px;
   object-fit: cover;
-  opacity: 0.75;
+  opacity: 0.95;
 }
 .image-6-icon,
 .image-7-icon {
@@ -280,13 +280,29 @@
   left: 0;
   font-size: var(--font-size-base);
 }
-.note-the-stores-are-from-the-parent {
+.note-the-stores-are-from-the-group1 {
+  padding-top: 50px;
+  background-color: rgba(168, 134, 46, 0.64);
   position: absolute;
-  width: 78.17%;
-  top: 60px;
-  right: 11.08%;
-  left: 10.75%;
-  height: 313px;
+  width: 78.02%;
+  top: 50px;
+  right: 11.03%;
+  left: 10.95%;
+  height: 291px;
+  border-radius: 25px;
+}
+
+.note-the-stores-are-from-the-group1.slideFromLeft {
+  animation: slideFromLeft 2s forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .cool-part-is {
   margin: 0;
@@ -309,7 +325,7 @@
   left: 12.11%;
   height: 179px;
   font-size: var(--font-size-6xl);
-  color: var(--color-darkgoldenrod);
+  color: rgba(0, 0, 0, 0.75);
 }
 .the-next-1 {
   flex: 1;

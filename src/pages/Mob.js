@@ -1,13 +1,35 @@
-import { useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import "./Mob.css";
 
 const Mob = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const targetRef = useRef(null);
   const onFrameContainerClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='frameContainer']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.5, // Adjust as needed
+      }
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
 
   return (
     <div className="mob">
@@ -79,14 +101,14 @@ const Mob = () => {
           <img className="image-5-icon" alt="" src="/image-5@2x.png" />
           <img className="image-6-icon" alt="" src="/image-6@2x.png" />
           <img className="image-7-icon" alt="" src="/image-7@2x.png" />
-          <div className="note-the-stores-are-from-the-parent">
+          <div ref={targetRef} className={`note-the-stores-are-from-the-group1 ${isVisible ? 'slideFromLeft' : ''}`}>
             <div className="note-the-stores-container">
               <span className="note-the-stores-container1">
                 <span>Note:</span>
                 <span className="the-stores-are">{` The stores are from the actual sellers who want to sell their interest, creativity, passion  & hobby to make business out of it.    `}</span>
               </span>
             </div>
-            <div className="explore-stores-instead">
+            <div className="explore-stores-instead" style={{marginTop:'15px'}}>
               Explore stores instead search
             </div>
             <div className="before-you-end">
@@ -95,8 +117,7 @@ const Mob = () => {
               and follow the store, which will become your first favorite store
               in the online marketplace
             </div>
-          </div>
-          <div className="cool-part-is-you-can-also-purc-wrapper">
+            <div className="cool-part-is-you-can-also-purc-wrapper">
             <div className="cool-part-is-container">
               <span className="note-the-stores-container1">
                 <p className="cool-part-is">{`Cool part is you can also purchase with your `}</p>
@@ -104,6 +125,8 @@ const Mob = () => {
               </span>
             </div>
           </div>
+          </div>
+          
           <div className="the-next-1-billion-people-in-i-wrapper">
             <div className="the-next-1">
               The next 1 billion people in India prefer online shopping

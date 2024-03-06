@@ -1,17 +1,37 @@
-import { useCallback } from "react";
-import "./Dek.css";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import Aboutus from './Aboutus';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+
+import './Dek.css';
+
 
 const Dek = () => {
-  const [showAboutUs, setShowAboutUs] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const targetRef = useRef(null);
+
   const onFrameContainerClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='frameContainer']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.5, // Adjust as needed
+      }
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
   return (
     <div className="dek">
@@ -25,7 +45,7 @@ const Dek = () => {
           <div className="contact-container" onClick={onFrameContainerClick}>
             <b className="contact3">Contact</b>
           </div>
-          <Link to="/aboutus" onClick={() => setShowAboutUs(true)}>About Us</Link>
+         
         </div>
         <div className="group-wrapper2">
           <div className="craft-toxmo-1-group">
@@ -85,17 +105,18 @@ const Dek = () => {
       <div className="dek-inner">
         <div className="image-5-group">
           <img className="image-5-icon1" alt="" src="/image-5@2x.png" />
-          <div className="note-the-stores-are-from-the-group">
-            <div className="note-the-stores-container2">
+          <div ref={targetRef} className={`note-the-stores-are-from-the-group ${isVisible ? 'slideFromLeft' : ''}`}>
+            <div className="note-the-stores-container2" style={{ marginTop: '80px' }}> 
               <span className="note-the-stores-container3">
                 <span>Note:</span>
                 <span className="the-stores-are1">{` The stores are from the actual sellers who want to sell their interest, creativity, passion  & hobby to make business out of it.    `}</span>
               </span>
             </div>
-            <div className="explore-stores-instead1">
+            <div className="explore-stores-instead1" style={{ marginTop: '20px' }}>
+
               Explore stores instead search
             </div>
-            <div className="before-you-end1">
+            <div className="before-you-end1" style={{ marginTop: '60px' }}>
               Before you end up purchasing the product on Toxmo, you will
               explore the store; after you receive the product, you will like
               and follow the store, which will become your first favorite store
