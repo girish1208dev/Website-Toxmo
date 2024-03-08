@@ -48,6 +48,10 @@ const Dek = () => {
          
         </div>
         <div className="group-wrapper2">
+        
+        <div className="container12">
+      <b className="movingText">Lunching Soon</b>
+    </div>
           <div className="craft-toxmo-1-group">
             <img
               className="craft-toxmo-1-icon1"
@@ -97,7 +101,7 @@ const Dek = () => {
           <b className="toxmo-commerce-happens-container">
             <p className="toxmo2">Toxmo</p>
             <p className="commerce-happens-exploring1">
-              Commerce happens exploring the stores
+            India's first passion-based social commerce marketplace
             </p>
           </b>
         </div>
@@ -108,19 +112,16 @@ const Dek = () => {
           <div ref={targetRef} className={`note-the-stores-are-from-the-group ${isVisible ? 'slideFromLeft' : ''}`}>
             <div className="note-the-stores-container2" style={{ marginTop: '80px' }}> 
               <span className="note-the-stores-container3">
-                <span>Note:</span>
-                <span className="the-stores-are1">{` The stores are from the actual sellers who want to sell their interest, creativity, passion  & hobby to make business out of it.    `}</span>
+               
+                <span className="the-stores-are1">{`  Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business. `}</span>
               </span>
             </div>
             <div className="explore-stores-instead1" style={{ marginTop: '20px' }}>
 
-              Explore stores instead search
+            Business born from passion
             </div>
             <div className="before-you-end1" style={{ marginTop: '60px' }}>
-              Before you end up purchasing the product on Toxmo, you will
-              explore the store; after you receive the product, you will like
-              and follow the store, which will become your first favorite store
-              in the online marketplace
+            Purchasing products from passionate sellers is the perfect choice for value for money 
             </div>
           </div>
           <div className="cool-part-is-you-can-also-purc-container">
@@ -133,9 +134,9 @@ const Dek = () => {
           </div>
           <div className="the-next-1-billion-people-in-i-container">
             <div className="the-next-11">
-              The next 1 billion people in India prefer online shopping
+            The next 1 billion people in India prefer online shopping
               connected with stores to gain trust and have a better experience,
-              rather than simply searching for products through a search bar
+              rather than purchaing products from static marketplaces
             </div>
           </div>
         </div>

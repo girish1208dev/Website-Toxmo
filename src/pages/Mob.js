@@ -39,10 +39,13 @@ const Mob = () => {
         </div>
         <div className="commerce-happens-exploring-the-wrapper">
           <b className="commerce-happens-exploring">
-            Commerce happens exploring the stores
+          India's first passion-based social commerce marketplace
           </b>
         </div>
         <div className="group-wrapper">
+        <div className="container12">
+      <b className="movingText">Lunching Soon</b>
+    </div>
           <div className="craft-toxmo-1-parent">
             <img
               className="craft-toxmo-1-icon"
@@ -104,24 +107,23 @@ const Mob = () => {
           <div ref={targetRef} className={`note-the-stores-are-from-the-group1 ${isVisible ? 'slideFromLeft' : ''}`}>
             <div className="note-the-stores-container">
               <span className="note-the-stores-container1">
-                <span>Note:</span>
-                <span className="the-stores-are">{` The stores are from the actual sellers who want to sell their interest, creativity, passion  & hobby to make business out of it.    `}</span>
+                
+                <span className="the-stores-are">{` Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business.  `}</span>
               </span>
             </div>
             <div className="explore-stores-instead" style={{marginTop:'15px'}}>
-              Explore stores instead search
+              Business born from passion
             </div>
             <div className="before-you-end">
-              Before you end up purchasing the product on Toxmo, you will
-              explore the store; after you receive the product, you will like
-              and follow the store, which will become your first favorite store
-              in the online marketplace
+              
+              Purchasing products from passionate sellers is the perfect choice for value for money 
+
             </div>
             <div className="cool-part-is-you-can-also-purc-wrapper">
             <div className="cool-part-is-container">
               <span className="note-the-stores-container1">
-                <p className="cool-part-is">{`Cool part is you can also purchase with your `}</p>
-                <p className="cool-part-is">friends and other people</p>
+                <p className="cool-part-is">{`Get all your products in live and teams from like-minded people `}</p>
+               
               </span>
             </div>
           </div>
@@ -131,7 +133,7 @@ const Mob = () => {
             <div className="the-next-1">
               The next 1 billion people in India prefer online shopping
               connected with stores to gain trust and have a better experience,
-              rather than searching for products through a search bar
+              rather than purchaing products from static marketplaces
             </div>
           </div>
         </div>
