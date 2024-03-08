@@ -113,7 +113,7 @@ const Dek = () => {
             <div className="note-the-stores-container2" style={{ marginTop: '80px' }}> 
               <span className="note-the-stores-container3">
                
-                <span className="the-stores-are1">{`  Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business. `}</span>
+                <span className="the-stores-are1">{` Purchasing products from passionate sellers is the perfect choice for value for money   `}</span>
               </span>
             </div>
             <div className="explore-stores-instead1" style={{ marginTop: '20px' }}>
@@ -121,14 +121,14 @@ const Dek = () => {
             Business born from passion
             </div>
             <div className="before-you-end1" style={{ marginTop: '60px' }}>
-            Purchasing products from passionate sellers is the perfect choice for value for money 
+            Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business
             </div>
           </div>
           <div className="cool-part-is-you-can-also-purc-container">
             <div className="cool-part-is-container2">
               <span className="note-the-stores-container3">
-                <p className="toxmo2">{`Cool part is you can also purchase with your `}</p>
-                <p className="toxmo2">friends and other people</p>
+                <p className="toxmo2">{`Get all your products in live and teams from like-minded people  `}</p>
+                
               </span>
             </div>
           </div>

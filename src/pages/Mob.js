@@ -108,15 +108,15 @@ const Mob = () => {
             <div className="note-the-stores-container">
               <span className="note-the-stores-container1">
                 
-                <span className="the-stores-are">{` Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business.  `}</span>
+                <span className="the-stores-are">{`Purchasing products from passionate sellers is the perfect choice for value for money   `}</span>
               </span>
             </div>
             <div className="explore-stores-instead" style={{marginTop:'15px'}}>
               Business born from passion
             </div>
             <div className="before-you-end">
+            Do you want to turn your passion into a business? Whether it's sports, fashion, art, crafts, or more, this marketplace is perfect for you. Existing static marketplaces won't work for selling your passion-driven business
               
-              Purchasing products from passionate sellers is the perfect choice for value for money 
 
             </div>
             <div className="cool-part-is-you-can-also-purc-wrapper">
