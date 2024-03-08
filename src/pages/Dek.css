@@ -40,7 +40,8 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 25px; /* Adjust height as needed */
+  height: 25px;
+  margin-top: -8px; /* Adjust height as needed */
 }
 
 .movingText {

@@ -44,7 +44,7 @@ const Mob = () => {
         </div>
         <div className="group-wrapper">
         <div className="container12">
-      <b className="movingText">Lunching Soon</b>
+      <b className="movingText">Launching Soon</b>
     </div>
           <div className="craft-toxmo-1-parent">
             <img
