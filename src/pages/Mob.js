@@ -202,7 +202,7 @@ const Mob = () => {
             <img className="instagram-icon" alt="" src="/instagram@2x.png" />
               <a
                 className="ijjigbkuvy2"
-                href="https://www.instagram.com/toxmo.in?igsh=MXZqZzNsemx2ODJrdA=="
+                href="https://www.instagram.com/toxmonow?igsh=MXZqZzNsemx2ODJrdA=="
                 target="_blank"
               >
                 I
